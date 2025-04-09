@@ -14,6 +14,7 @@ export const info = {
       location: "Remote (San Francisco, USA)",
       startDate: "April 2025",
       endDate: "Present",
+      isInternship: false,
       description: [
         "Truco is the AI-Powered Outreach Optimization for Smarter Debt Recovery",
         "- Developing Platform with React for Frontend. ",
@@ -26,6 +27,7 @@ export const info = {
       location: "Mumbai, India",
       startDate: "Aug 2022",
       endDate: "April 2025",
+      isInternship: false,
       description: [
         "Testlify is the talent assessment platform helping companies hire the best talent quickly, easily, and accurately.",
         "- Developing Talent Assessment Platform with Javascript- based Frameworks Vue and React for Frontend. ",
@@ -38,6 +40,7 @@ export const info = {
       location: "Mumbai, India",
       startDate: "Apr 2021",
       endDate: "Aug 2022",
+      isInternship: false,
       description: [
         "- Developed a Learning Management and Content Management System",
         "- Used Vue Ecosystem (Nuxt , VueX) for frontend development",
@@ -50,6 +53,7 @@ export const info = {
       location: "Remote",
       startDate: "Aug 2020",
       endDate: "Dec 2020",
+      isInternship: true,
       description: [
         "- Developed Hybrid(Android & iOS ) Mobile Application",
         "- Beezhive (Canadian SuperApp). Used Flutter For building mobile app UI.",
@@ -62,6 +66,7 @@ export const info = {
       location: "Mumbai, India",
       startDate: "Nov 2019",
       endDate: "Jan 2020",
+      isInternship: true,
       description: [
         "- Developed Hybrid(Android & iOS ) Mobile Application",
         "- Gullymart a Grocery app. Used Flutter For building mobile app UI.",

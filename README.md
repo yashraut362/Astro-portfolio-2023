@@ -65,5 +65,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
-# astro-portfolio-2023
-# Astro-portfolio-2023
+
+# astro-portfolio-2025
+
+# Astro-portfolio-2025

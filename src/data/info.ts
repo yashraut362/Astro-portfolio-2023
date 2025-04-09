@@ -9,11 +9,23 @@ export const info = {
 
   experience: [
     {
+      name: "Truco.ai",
+      position: "Full stack Developer",
+      location: "Remote (San Francisco, USA)",
+      startDate: "April 2025",
+      endDate: "Present",
+      description: [
+        "Truco is the AI-Powered Outreach Optimization for Smarter Debt Recovery",
+        "- Developing Platform with React for Frontend. ",
+        "- For Backend development working on Flask/Python/Firebase.",
+      ],
+    },
+    {
       name: "Testlify",
       position: "Frontend Lead",
       location: "Mumbai, India",
       startDate: "Aug 2022",
-      endDate: "Present",
+      endDate: "April 2025",
       description: [
         "Testlify is the talent assessment platform helping companies hire the best talent quickly, easily, and accurately.",
         "- Developing Talent Assessment Platform with Javascript- based Frameworks Vue and React for Frontend. ",

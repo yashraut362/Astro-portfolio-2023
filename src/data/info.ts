@@ -2,9 +2,9 @@ export const info = {
   baseUrl: "https://www.yashraut.me",
   name: "Yash Raut",
   jobDescription: "Web Developer",
-  about: `Hello! I'm a Mumbai-based software engineer specializing in front-end development. With 3+ years of experience in the computer software industry, I've successfully completed numerous web projects from scratch. I have a passion for continuous learning and exploring new technologies to enhance my skills.
-  Additionally, I have a strong background in software development and 2+ years of experience in the IT industry. I excel in managing multiple projects simultaneously, consistently delivering exceptional results within tight deadlines.
-  In summary, I'm a dedicated software engineer with expertise in front-end development, backed by over 3 years of industry experience. I thrive on continuous learning and have a proven track record of successful project management. Let's collaborate and create something remarkable!
+  about: `Hello! I'm a Mumbai-based software engineer specializing in front-end development. With 4+ years of experience in the computer software industry, I've successfully completed numerous web projects from scratch. I have a passion for continuous learning and exploring new technologies to enhance my skills.
+  Additionally, I have a strong background in software development and 4+ years of experience in the IT industry. I excel in managing multiple projects simultaneously, consistently delivering exceptional results within tight deadlines.
+  In summary, I'm a dedicated software engineer with expertise in front-end development, backed by over 4 years of industry experience. I thrive on continuous learning and have a proven track record of successful project management. Let's collaborate and create something remarkable!
   `,
 
   experience: [

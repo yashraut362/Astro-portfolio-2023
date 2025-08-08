@@ -3,13 +3,13 @@ import { info } from "@data";
 const skills = info.skills;
 ---
 
-<div>
+<div data-animate="fade-up">
   <h2 class="w-[15rem] dark:text-light mt-16">SKILLS</h2>
   <div class="grid grid-cols-4 gap-5 py-16">
     {
-      skills.map((skill) => {
+      skills.map((skill, i) => {
         return (
-          <div class="flex flex-col items-center justify-center">
+          <div class="flex flex-col items-center justify-center" data-animate="fade-up" data-animate-delay={(i%6)*50}>
             <img class="h-10 w-10" src={skill.icon} alt="logo" />
             <h3 class="dark:text-light"> {skill.name}</h3>
           </div>

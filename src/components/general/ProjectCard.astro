@@ -4,7 +4,7 @@ const { projectDetail } = Astro.props as IProjectDetails;
 const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
 ---
 
-<article class="w-full max-h-[25rem] overflow-hidden relative group">
+<article class="w-full max-h-[25rem] overflow-hidden relative group" data-animate="fade-up">
   <div class="flex items-center absolute right-4 top-4 z-10">
     {
       githubUrl && (
@@ -62,7 +62,7 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
   <a href={liveUrl ? liveUrl : githubUrl} target="_blank">
     <img
       src={thumbnail}
-      class="w-full h-auto scale-100 hover:scale-110 transition duration-[1.5s]"
+      class="w-full h-auto scale-100 hover:scale-105 transition-[transform,filter] duration-700 ease-out will-change-transform"
       loading="lazy"
       width="100%"
       height="100%"

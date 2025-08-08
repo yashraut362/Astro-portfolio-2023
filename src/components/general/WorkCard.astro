@@ -4,16 +4,16 @@ const { title, desc, role, thumbnail, link } = workDetail;
 const isEven = index % 2 === 0;
 ---
 
-<article class="w-full overflow-hidden relative group pb-10">
+<article class="w-full overflow-hidden relative group pb-10" data-animate>
   <div
     class={`flex flex-col items-center justify-between space-x-5 
     ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
   >
-    <div class="w-full md:w-1/2">
+  <div class="w-full md:w-1/2" data-animate={isEven ? 'fade-right' : 'fade-left'}>
       <img src={thumbnail} alt="projectImage" class="rounded-lg" />
     </div>
 
-    <div class="flex flex-col w-full md:w-1/2">
+  <div class="flex flex-col w-full md:w-1/2" data-animate="fade-up" data-animate-delay="80">
       <h2 class="dark:text-white font-semibold text-4xl">{title}</h2>
       <p class="pt-3 text-blue">Role : {role}</p>
       <p class="dark:text-white pt-5">

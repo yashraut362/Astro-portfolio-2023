@@ -26,17 +26,17 @@ const Works = info.works.map((work) => work);
 
   <body>
     <Layout>
-      <Hero name={info.name} about={info.about} />
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      <Experience title={"EDUCATION"} details={info.education} />
+  <Hero name={info.name} about={info.about} />
+  <Experience title={"EXPERIENCE"} details={info.experience} />
+  <Experience title={"EDUCATION"} details={info.education} />
 
-      <h1 style="line-height: 1.2;" class="pb-10">Professional Projects</h1>
+  <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">Professional Projects</h1>
       <WorkWrapper works={Works} />
-      <section>
+  <section data-animate="fade-up">
         <h2 class="w-[15rem] dark:text-light mt-16">PERSONAL PROJECTS</h2>
         <ProjectsWrapper projects={info.projects} />
       </section>
-      <section>
+  <section data-animate="fade-up">
         <Skills />
       </section>
     </Layout>

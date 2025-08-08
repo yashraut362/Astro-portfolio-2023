@@ -5,6 +5,13 @@ import WorkCard from "./WorkCard.astro";
 const { works } = Astro.props as IWorks;
 ---
 
-<div class="flex flex-col space-y-10">
-  {works.map((work, index) => <WorkCard workDetail={work} index={index} />)}
+<div class="flex flex-col space-y-10" data-animate="fade-up">
+  {works.map((work, index) => (
+    <div
+      data-animate={index % 2 === 0 ? "fade-right" : "fade-left"}
+      data-animate-delay={(index%3)*70}
+    >
+      <WorkCard workDetail={work} index={index} />
+    </div>
+  ))}
 </div>

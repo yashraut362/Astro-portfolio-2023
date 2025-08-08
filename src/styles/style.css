@@ -39,3 +39,31 @@
     @apply dark:text-light flex items-center border border-dark dark:border-light p-4 rounded-lg justify-center;
   }
 }
+
+/* ========== subtle animation system (scroll reveal) ========== */
+/* initial state for all revealable elements */
+[data-animate] {
+  opacity: 0.001; /* use tiny value to avoid Safari rendering quirks */
+  transform: translateY(12px);
+  transition-property: opacity, transform;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+/* visible state toggled by JS */
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* utility modifiers for direction/intensity */
+[data-animate="fade-up"] { transform: translateY(12px); }
+[data-animate="fade-down"] { transform: translateY(-12px); }
+[data-animate="fade-left"] { transform: translateX(12px); }
+[data-animate="fade-right"] { transform: translateX(-12px); }
+[data-animate="fade"] { transform: none; }
+
+/* slightly longer timing for hero */
+.reveal-slow { transition-duration: 800ms; }
+.reveal-fast { transition-duration: 400ms; }

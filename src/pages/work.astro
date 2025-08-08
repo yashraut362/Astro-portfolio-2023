@@ -21,9 +21,9 @@ const Works = info.works.map((work) => work);
 
   <body>
     <Layout>
-      <h1 style="line-height: 1.2;" class="pb-10">Professional Projects</h1>
-      <WorkWrapper works={Works} />
-      <section>
+  <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">Professional Projects</h1>
+  <WorkWrapper works={Works} />
+  <section data-animate="fade-up">
         <h2 class="w-[15rem] dark:text-light mt-16">PERSONAL PROJECTS</h2>
         <ProjectsWrapper projects={info.projects} />
       </section>

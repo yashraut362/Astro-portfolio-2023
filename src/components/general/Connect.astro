@@ -1,0 +1,78 @@
+---
+import { info } from "@data";
+
+const { connect } = info;
+const emailHref = `mailto:${connect.email}`;
+---
+
+<section data-animate="fade-up" class="mt-16">
+  <h2 class="w-[15rem] dark:text-light mb-6">{connect.title}</h2>
+  <div
+    class="relative overflow-hidden rounded-3xl border border-dark dark:border-light bg-light dark:bg-dark px-8 py-12"
+  >
+    <div
+      class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-blue/30 blur-3xl dark:bg-blue/20"
+    ></div>
+    <div class="relative flex flex-col md:flex-row md:items-center gap-10">
+      <div class="max-w-2xl space-y-5">
+        <h3 class="text-3xl font-semibold text-dark dark:text-light">
+          Let's create something remarkable together.
+        </h3>
+        <p class="text-lg leading-relaxed text-dark-gray dark:text-light/80">
+          {connect.description}
+        </p>
+      </div>
+
+      <div class="flex flex-col space-y-4">
+        <a
+          class="group relative inline-block text-md font-semibold text-blue focus:outline-none focus:ring active:text-blue"
+          href={connect.calendly}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="absolute inset-0 border border-current"></span>
+          <span
+            class="flex items-center justify-center gap-2 border border-current bg-primary px-10 py-4 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Book a call</span>
+          </span>
+        </a>
+        <a
+          class="group relative inline-block text-md font-semibold text-white focus:outline-none focus:ring"
+          href={emailHref}
+        >
+          <span class="absolute inset-0 border border-blue group-active:border-blue"></span>
+          <span
+            class="flex items-center justify-center gap-2 border border-blue bg-blue px-10 py-4 transition-transform active:border-blue active:bg-blue group-hover:-translate-x-1 group-hover:-translate-y-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Drop me an email</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

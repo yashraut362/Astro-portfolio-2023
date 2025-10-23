@@ -104,8 +104,15 @@ export const info = {
 
   socialMedia: {
     github: "https://github.com/yashraut362",
-    email: "yashraut362@gmail.com",
+    email: "hello@yashraut.me",
     linkedin: "https://www.linkedin.com/in/yashraut362",
+  },
+  connect: {
+    title: "LET'S CONNECT",
+    description:
+      "Have a project in mind or just want to chat about product, engineering, or the web? Schedule a call or drop an email—I’d love to hear from you.",
+    calendly: "https://calendly.com/yashraut362/30min",
+    email: "hello@yashraut.me",
   },
 
   liveProjects: [

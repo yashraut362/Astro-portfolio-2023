@@ -8,6 +8,7 @@ import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 import Skills from "@components/general/Skills.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 import WorkWrapper from "@components/general/WorkWrapper.astro";
+import Connect from "@components/general/Connect.astro";
 
 const Works = info.works.map((work) => work);
 ---
@@ -39,6 +40,7 @@ const Works = info.works.map((work) => work);
   <section data-animate="fade-up">
         <Skills />
       </section>
+      <Connect />
     </Layout>
   </body>
 </html>

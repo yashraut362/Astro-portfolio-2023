@@ -1,7 +1,11 @@
 ---
+import { info } from "@data";
 import { IExperiences } from "@types";
 
 const { title, details } = Astro.props as IExperiences;
+const skillsByName = new Map(
+  info.skills.map((skill) => [skill.name.toLowerCase(), skill]),
+);
 ---
 
 <section
@@ -13,10 +17,10 @@ const { title, details } = Astro.props as IExperiences;
     {
       details.map((item) => (
         <div class="my-16" data-animate="fade-up">
-          <div class="flex justify-between items-center flex-wrap">
+          <div class="flex justify-between items-center flex-wrap gap-3">
             <div class="flex items-center space-x-2">
               <h3 class="text-2xl font-semibold">{item.name}</h3>
-              {item.isInternship ? (
+              {item?.isInternship ? (
                 <div class="bg-blue rounded-3xl px-2 py-1">
                   <p class="text-sm text-white">Internship</p>
                 </div>
@@ -26,11 +30,33 @@ const { title, details } = Astro.props as IExperiences;
               {item.startDate} - {item.endDate}
             </p>
           </div>
-          <p class="text-md font-medium mt-1 text-blue">{item.position}</p>
+          <div class="flex flex-row items-center justify-between gap-2">
+            <p class="text-md font-medium mt-1 text-blue">{item.position}</p>
+            {item.techStack?.length ? (
+              <div class="mt-2 flex flex-wrap justify-end gap-2">
+                {item.techStack.map((tech) => {
+                  const skill = skillsByName.get(tech.toLowerCase());
+                  if (!skill) return null;
+                  return (
+                    <div class="group relative flex h-7 w-7 items-center justify-center rounded-md border border-blue/10 bg-white/70 shadow-sm shadow-blue/5 backdrop-blur transition duration-300 ease-out hover:-translate-y-1 hover:scale-125 hover:border-blue/40 hover:bg-white hover:shadow-lg hover:shadow-blue/20 dark:bg-white/5 dark:hover:bg-white/10">
+                      <img
+                        class="h-4 w-4 opacity-85 transition duration-300 group-hover:opacity-100"
+                        src={skill.icon}
+                        alt={skill.name}
+                      />
+                      <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-md bg-dark px-2 py-1 text-[10px] font-medium text-white opacity-0 shadow-lg transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-light dark:text-dark">
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
+          </div>
           <p class="text-sm mt-3 text-blue">{item.location}</p>
           <ul class="mt-3">
-            {item.description.map((item) => (
-              <li class="dark:text-gray">{item}</li>
+            {item.description.map((line) => (
+              <li class="dark:text-gray">{line}</li>
             ))}
           </ul>
         </div>

@@ -10,11 +10,13 @@ export interface IHeroProps {
 }
 
 export interface IExperience {
+  [x: string]: any;
   name: string;
   position: string;
   location: string;
   startDate: string;
   endDate: string;
+  techStack?: string[];
   description: string[];
 }
 export interface IExperiences {

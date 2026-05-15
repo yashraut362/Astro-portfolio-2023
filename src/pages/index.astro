@@ -4,13 +4,9 @@ import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
 import Experience from "@components/home/Experience.astro";
-import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 import Skills from "@components/general/Skills.astro";
 import MetaHead from "@components/general/MetaHead.astro";
-import WorkWrapper from "@components/general/WorkWrapper.astro";
 import Connect from "@components/general/Connect.astro";
-
-const Works = info.works.map((work) => work);
 ---
 
 <!DOCTYPE html>
@@ -27,19 +23,66 @@ const Works = info.works.map((work) => work);
 
   <body>
     <Layout>
-  <Hero name={info.name} about={info.about} />
-  <Experience title={"EXPERIENCE"} details={info.experience} />
-  <Experience title={"EDUCATION"} details={info.education} />
-
-  <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">Professional Projects</h1>
-      <WorkWrapper works={Works} />
-  <section data-animate="fade-up">
-        <h2 class="w-[15rem] dark:text-light mt-16">PERSONAL PROJECTS</h2>
-        <ProjectsWrapper projects={info.projects} />
+      <Hero name={info.name} about={info.about} />
+      <Experience title={"EXPERIENCE"} details={info.experience} />
+      <section
+        data-animate="fade-up"
+        class="my-10 flex flex-col gap-6 border-y border-dark/10 py-8 dark:border-light/10 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div class="max-w-2xl">
+          <div class="relative inline-block">
+            <p class="text-sm uppercase tracking-[0.2em] text-blue">Work</p>
+            <span class="absolute w-calc-full bottom-0 left-[-5px] top-[65px]">
+              <svg
+                class="-z-10 fill-blue"
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="10"
+                viewBox="0 0 120 10"
+                aria-hidden="true"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M118.273 6.09C79.243 4.558 40.297 5.459 1.305 9.034c-1.507.13-1.742-1.521-.199-1.81C39.81-.228 79.647-1.568 118.443 4.2c1.63.233 1.377 1.943-.17 1.89Z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <h3
+            class="text-2xl font-semibold text-dark dark:text-light sm:text-3xl"
+          >
+            Want to see the fun things I build?
+          </h3>
+        </div>
+        <a
+          class="group relative inline-block text-md font-semibold text-white focus:outline-none focus:ring"
+          href="/work"
+        >
+          <span class="absolute inset-0 border border-blue"></span>
+          <span
+            class="flex items-center justify-center gap-2 border border-blue bg-blue px-8 py-3 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+          >
+            View my work
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-7-7 7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
       </section>
-  <section data-animate="fade-up">
+      <section data-animate="fade-up">
         <Skills />
       </section>
+      <Experience title={"EDUCATION"} details={info.education} />
       <Connect />
     </Layout>
   </body>

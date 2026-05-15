@@ -256,7 +256,7 @@ export const info = {
       desc: "Ready for Marriage Christian is an internal tool for managing a database of single Christian individuals seeking marriage. It helps assess readiness for a faith-based relationship, tracks profiles, and facilitates matching based on relationship criteria, while supporting profile management and analytics.",
       role: "Full Stack Developer",
       thumbnail: "/assets/images/work/rfm.png",
-      link: "https://readyformarriagechristians.com",
+      link: "",
     },
     {
       title: "Zeza Tech - Data Engineering & Machine Learning Solutions",

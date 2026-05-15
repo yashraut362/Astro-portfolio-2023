@@ -30,6 +30,7 @@ export interface IProject {
   thumbnail: string;
   githubUrl: string;
   liveUrl: string;
+  category?: "web" | "mobile";
 }
 export interface IProjects {
   projects: IProject[];

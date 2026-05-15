@@ -7,6 +7,12 @@ import WorkWrapper from "@components/general/WorkWrapper.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 
 const Works = info.works.map((work) => work);
+const webProjects = info.projects.filter(
+  (project) => project.category === "web",
+);
+const mobileProjects = info.projects.filter(
+  (project) => project.category === "mobile",
+);
 ---
 
 <!DOCTYPE html>
@@ -21,11 +27,20 @@ const Works = info.works.map((work) => work);
 
   <body>
     <Layout>
-  <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">Professional Projects</h1>
-  <WorkWrapper works={Works} />
-  <section data-animate="fade-up">
-        <h2 class="w-[15rem] dark:text-light mt-16">PERSONAL PROJECTS</h2>
-        <ProjectsWrapper projects={info.projects} />
+      <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">
+        Professional Projects
+      </h1>
+      <WorkWrapper works={Works} />
+      <section data-animate="fade-up" class="mt-20">
+        <h1 style="line-height: 1.2;" class="pb-10">Personal Projects</h1>
+        <section data-animate="fade-up">
+          <h2 class="w-[15rem] dark:text-light">Web Apps</h2>
+          <ProjectsWrapper projects={webProjects} />
+        </section>
+        <section data-animate="fade-up">
+          <h2 class="w-[15rem] dark:text-light">Mobile Apps</h2>
+          <ProjectsWrapper projects={mobileProjects} />
+        </section>
       </section>
     </Layout>
   </body>

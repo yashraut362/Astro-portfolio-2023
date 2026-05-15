@@ -141,6 +141,7 @@ export const info = {
       thumbnail: "/assets/images/web/dcverse.webp",
       githubUrl: "https://github.com/yashraut362/movie-x",
       liveUrl: "https://moviex.yashraut.me",
+      category: "web",
     },
     {
       title: "Weshare File Sharing App",
@@ -148,6 +149,7 @@ export const info = {
       thumbnail: "/assets/images/web/weshare.webp",
       githubUrl: "https://github.com/yashraut362/we-share",
       liveUrl: "https://wesharefiles.vercel.app/",
+      category: "web",
     },
     {
       title: "CryptoNation CryptoCurrency Tracker App",
@@ -155,6 +157,7 @@ export const info = {
       thumbnail: "/assets/images/web/cryptonation.webp",
       githubUrl: "https://github.com/yashraut362/CryptoNation",
       liveUrl: "http://cryptonation.vercel.app/",
+      category: "web",
     },
     {
       title: "LinkLoom Link Shortner App",
@@ -162,6 +165,7 @@ export const info = {
       thumbnail: "/assets/images/web/linkloom.png",
       githubUrl: "https://github.com/yashraut362/LinkLoom",
       liveUrl: "https://linklooms.vercel.app/",
+      category: "web",
     },
     {
       title: "Youtube Thumbnail Grabber (NPM Package)",
@@ -169,6 +173,7 @@ export const info = {
       thumbnail: "/assets/images/os/os1.webp",
       githubUrl: "https://github.com/yashraut362/youtube-thumbnail-grabber",
       liveUrl: "https://www.npmjs.com/package/youtube-thumbnail-grabber",
+      category: "web",
     },
 
     {
@@ -177,6 +182,7 @@ export const info = {
       thumbnail: "/assets/images/os/os2.webp",
       githubUrl: "https://github.com/yashraut362/Glasswidgets",
       liveUrl: "https://pub.dev/packages/glasswidgets",
+      category: "mobile",
     },
     {
       title: "CoronaGo Covid-19 Tracker App",
@@ -184,6 +190,7 @@ export const info = {
       thumbnail: "/assets/images/web/coronago.webp",
       githubUrl: "https://github.com/yashraut362/CoronaGo",
       liveUrl: "https://coronagoo.netlify.app/",
+      category: "web",
     },
     {
       title: "Pothole Detection System",
@@ -191,6 +198,7 @@ export const info = {
       thumbnail: "/assets/images/mobile/pothole.webp",
       githubUrl: "https://github.com/yashraut362/Pothole_Challenge",
       liveUrl: null,
+      category: "mobile",
     },
     {
       title: "Know Your device",
@@ -198,6 +206,7 @@ export const info = {
       thumbnail: "/assets/images/mobile/mockup.webp",
       githubUrl: "https://github.com/yashraut362/KnowYourDevice",
       liveUrl: null,
+      category: "mobile",
     },
     {
       title: "Fitnese App",
@@ -205,6 +214,7 @@ export const info = {
       thumbnail: "/assets/images/mobile/fitnessapp.webp",
       githubUrl: "https://github.com/yashraut362/FitnessApp_Flutter",
       liveUrl: null,
+      category: "mobile",
     },
     {
       title: "Evently - host events in your area",
@@ -212,6 +222,7 @@ export const info = {
       thumbnail: "/assets/images/mobile/evently.webp",
       githubUrl: "https://github.com/yashraut362/Evently_Flutter",
       liveUrl: null,
+      category: "mobile",
     },
     {
       title: "Project Keeper",
@@ -219,6 +230,7 @@ export const info = {
       thumbnail: "/assets/images/mobile/projectkeeper.webp",
       githubUrl: "https://github.com/yashraut362/ProjectKeeper",
       liveUrl: null,
+      category: "mobile",
     },
   ],
 

@@ -7,7 +7,8 @@ data-driven: updating it means editing `src/data/info.ts`, not components.
 ## Stack
 
 - [Astro](https://astro.build) 6 (static output) + TypeScript
-- Tailwind CSS via `@astrojs/tailwind`
+- Tailwind CSS v3, wired through PostCSS (`postcss.config.cjs` + `tailwind.config.cjs`) —
+  no `@astrojs/tailwind`, which doesn't support Astro 6
 - `@astrojs/sitemap` and `astro-robots-txt` (generated at build time)
 - Bun for installs and scripts (`bun.lock` is committed); npm works too
 - Node **24.x** — pinned in `package.json` `engines`. Astro 6 refuses to run on
@@ -92,4 +93,6 @@ Path aliases from `tsconfig.json`: `@components/*`, `@layouts/*`, `@data`, `@uti
 
 Vercel builds every push to `main`. It reads the Node version from `engines.node`,
 installs with Bun (frozen lockfile, since `bun.lock` is present) and runs `astro build`.
+The dependency set also resolves cleanly under plain `npm install`, so an `npm install`
+Install Command override in the project settings works too.
 The sitemap and `robots.txt` are produced during the build.

@@ -290,6 +290,8 @@ export const info = {
       title: "Tripora - AI Travel Companion Mobile App",
       desc: "Tripora is a mobile travel companion that generates personalized day-by-day itineraries from destination, trip duration, budget and interests. It integrates AI with real-time weather data to adapt recommendations to current and forecast conditions, and lets users modify and regenerate itineraries conversationally, making the plan dynamic rather than static. Built with React Native, Node.js, an AI/LLM API, Weather API, Maps API and Firebase.",
       role: "Full Stack Developer",
+      video:
+        "https://github.com/user-attachments/assets/8b213cb5-f90a-4faa-8230-a57d419285b0",
       link: "https://github.com/yashraut362/Tripora",
     },
     {

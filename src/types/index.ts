@@ -44,8 +44,9 @@ export interface IWork {
   title: string;
   desc: string;
   role: string;
-  thumbnail: string;
+  thumbnail?: string;
   link: string;
+  video?: string;
 }
 
 export interface IWorks {

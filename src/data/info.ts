@@ -3,10 +3,10 @@ const experienceYears = new Date().getFullYear() - 2021;
 export const info = {
   baseUrl: "https://www.yashraut.me",
   name: "Yash Raut",
-  jobDescription: "Web Developer",
-  about: `I’m a full-stack web and mobile developer with ${experienceYears}+ years of experience building and shipping products across the software industry. I specialize in developing scalable web and mobile applications from the ground up, with a strong focus on clean architecture, intuitive user experiences, and reliable execution.
+  jobDescription: "Software Engineer",
+  about: `I’m a software engineer and problem solver who takes products from a rough idea to something people rely on across web, desktop and mobile. With ${experienceYears}+ years of shipping end to end, I work closely with founders and teams to build scalable applications from the ground up, with a strong focus on clean architecture, intuitive user experiences, and reliable execution.
 
-  I enjoy solving product problems end-to-end, working across the stack, and quickly adapting to new technologies and workflows. Over the years, I’ve successfully managed multiple projects simultaneously while consistently delivering high-quality results under tight deadlines.
+  I enjoy owning product problems across the stack — data model, APIs and UI — and staying curious about the tools that make the next build better. Over the years, I’ve managed multiple projects simultaneously while consistently delivering high-quality results under tight deadlines.
 
   Driven by curiosity, continuous learning, and collaboration, I’m passionate about turning ideas into polished, impactful digital products. Let’s build something remarkable together.
   `,
@@ -14,30 +14,35 @@ export const info = {
   experience: [
     {
       name: "Truco.ai",
-      position: "Full stack Developer",
+      position: "Founding Engineer",
       location: "Remote (San Francisco, USA)",
-      startDate: "April 2025",
+      startDate: "May 2025",
       endDate: "Present",
       isInternship: false,
-      techStack: ["React", "Python", "Firebase"],
+      techStack: ["React", "Python", "MongoDB"],
       description: [
-        "Truco is an AI-powered platform for smarter outreach optimization in debt recovery.",
-        "- Building product experiences and internal workflows across the full stack.",
-        "- Shaping automation-driven features that support the core business workflow.",
+        "Truco is an AI product company solving real-world problems across industries, delivered through web, desktop and browser experiences.",
+        "- Drove SOC 2, HIPAA and security readiness — access control, audit logging, encryption and data-retention workflows across the product.",
+        "- Shipped the Chrome extension and Electron desktop app for meeting capture, from first prototype to production release.",
+        "- Built custom integrations and features end to end, owning the data model, APIs and UI as the founding engineer.",
+        "- Set up CI/CD and automated test pipelines on GitHub Actions and Google Cloud, making releases routine for a small team.",
       ],
     },
     {
       name: "Testlify",
-      position: "Frontend Lead",
-      location: "Mumbai, India",
-      startDate: "Aug 2022",
+      position: "Frontend Lead Developer",
+      location: "Remote (Mumbai, India)",
+      startDate: "Sep 2022",
       endDate: "April 2025",
       isInternship: false,
-      techStack: ["Vue", "React", "Javascript"],
+      techStack: ["Vue", "React", "Javascript", "MongoDB", "Firebase"],
       description: [
-        "Testlify is a talent assessment platform that helps companies hire the best talent quickly, easily, and accurately.",
-        "- Shipped core product features and improved the overall user experience.",
-        "- Contributed across frontend and backend workflows to support product growth.",
+        "Testlify is a talent assessment platform serving 3,000+ employers and running 30,000+ assessments a month.",
+        "- Led frontend engineering for the core assessment platform across employer and candidate experiences.",
+        "- Built AI-powered assessment evaluation, enabling automated scoring of candidate responses across multiple formats.",
+        "- Introduced video-response questions and AI chat simulations, letting employers evaluate communication and situational judgment.",
+        "- Built and integrated proctoring and anti-cheating capabilities to maintain assessment integrity in remote evaluations.",
+        "- Led a major revamp of the candidate portal, improving architecture, maintainability and candidate experience.",
       ],
     },
     {
@@ -47,11 +52,13 @@ export const info = {
       startDate: "Apr 2021",
       endDate: "Aug 2022",
       isInternship: false,
-      techStack: ["Vue", "Nuxt", "Firebase"],
+      techStack: ["Vue", "Nuxt", "MongoDB", "Firebase"],
       description: [
-        "- Developed a learning and content management system from the ground up.",
-        "- Delivered user-facing product flows and reusable application features.",
-        "- Supported backend services and system integrations.",
+        "Koyal builds an in-house learning and student-management platform used by schools in the US.",
+        "- Designed and developed Nova LMS end to end — group learning, doubt solving, Q&A workflows and a centralized video library.",
+        "- Built the CRM platform for student and operational workflows, including a Kanban-based board for tracking activities.",
+        "- Developed a React Native app bringing core LMS functionality to mobile alongside the web platform.",
+        "- Owned the frontend and contributed across architecture, backend integration and deployment, supporting 150+ daily active users.",
       ],
     },
     {
@@ -86,8 +93,8 @@ export const info = {
 
   education: [
     {
-      name: "Bachelors of Engineering in Information Technology",
-      position: "Vidyavardhini's College of Engineering and Technology ,Mumbai",
+      name: "Bachelor of Engineering in Information Technology",
+      position: "Vidyavardhini's College of Engineering and Technology, Mumbai",
       location: "University of Mumbai",
       startDate: "2018",
       endDate: "2021",
@@ -95,8 +102,8 @@ export const info = {
     },
     {
       name: "Diploma in Information Technology",
-      position: "Kala Vidyamandir Institute of Technology ,Mumbai",
-      location: "Maharashta State Board of Technical Education",
+      position: "Kala Vidyamandir Institute of Technology, Mumbai",
+      location: "Maharashtra State Board of Technical Education",
       startDate: "2015",
       endDate: "2018",
       description: ["Percentage : 82.53%"],
@@ -135,14 +142,6 @@ export const info = {
   ],
 
   projects: [
-    {
-      title: "MovieX Movie App",
-      isFeatured: true,
-      thumbnail: "/assets/images/web/dcverse.webp",
-      githubUrl: "https://github.com/yashraut362/movie-x",
-      liveUrl: "https://moviex.yashraut.me",
-      category: "web",
-    },
     {
       title: "Weshare File Sharing App",
       isFeatured: true,
@@ -237,15 +236,15 @@ export const info = {
   works: [
     {
       title: "Truco.ai",
-      desc: "Truco is an AI-driven platform for healthcare teams that unifies medical writing, procurement operations, Jira-style task management, and customizable AI workflows to streamline end-to-end execution across clinical and business functions.",
-      role: "Founding Full Stack Developer",
+      desc: "Truco is an AI product company solving real-world problems across industries, delivered through web, desktop and browser experiences — including a Chrome extension and Electron desktop app for meeting capture, custom end-to-end integrations, and SOC 2 / HIPAA-ready security workflows.",
+      role: "Founding Engineer",
       thumbnail: "/assets/images/work/truco.webp",
       link: "https://truco.ai",
     },
     {
       title: "Testlify - AI-Powered Talent Assessments",
       desc: "Testlify is an AI-driven platform that automates talent assessments, including video, audio, and open-ended questions. It streamlines recruitment by providing unbiased, efficient evaluations and integrates with over 1,000 ATS tools to enhance hiring workflows.",
-      role: "Frontend Lead",
+      role: "Frontend Lead Developer",
       thumbnail: "/assets/images/work/testlify1.png",
       link: "https://www.testlify.com/",
     },
@@ -276,6 +275,30 @@ export const info = {
       role: "Frontend Developer",
       thumbnail: "/assets/images/work/zeza1.png",
       link: "https://zeza.tech/",
+    },
+  ],
+
+  personalWorks: [
+    {
+      title: "MovieX - Movie Discovery Web App",
+      desc: "MovieX is a responsive platform for exploring movies, viewing trailers and discovering new releases, with TMDB API metadata powering search and up-to-date content. Built with React, Next.js and Tailwind CSS, and deployed on Vercel.",
+      role: "Frontend Developer",
+      thumbnail: "/assets/images/web/dcverse.webp",
+      link: "https://moviex.yashraut.me/",
+    },
+    {
+      title: "Tripora - AI Travel Companion Mobile App",
+      desc: "Tripora is a mobile travel companion that generates personalized day-by-day itineraries from destination, trip duration, budget and interests. It integrates AI with real-time weather data to adapt recommendations to current and forecast conditions, and lets users modify and regenerate itineraries conversationally, making the plan dynamic rather than static. Built with React Native, Node.js, an AI/LLM API, Weather API, Maps API and Firebase.",
+      role: "Full Stack Developer",
+      link: "https://github.com/yashraut362/Tripora",
+    },
+    {
+      title: "Codename - Multiplayer Picture Game",
+      desc: "Codename is a real-time multiplayer game where players interact and receive synchronized game updates over WebSocket communication. It is designed as separate frontend and backend services that handle live game state and player interaction through Socket.IO, with Redis-based game history storage so game data persists beyond an individual session. Built with Next.js, React, Socket.IO, Express.js, Redis and Tailwind CSS.",
+      role: "Full Stack Developer",
+      video:
+        "https://github.com/user-attachments/assets/77bcde5e-2446-4e7a-a9a3-59cb47ec26b1",
+      link: "https://github.com/yashraut362/codename-pictures-game",
     },
   ],
 

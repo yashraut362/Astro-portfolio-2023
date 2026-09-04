@@ -7,6 +7,7 @@ import WorkWrapper from "@components/general/WorkWrapper.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 
 const Works = info.works.map((work) => work);
+const personalWorks = info.personalWorks;
 const webProjects = info.projects.filter(
   (project) => project.category === "web",
 );
@@ -33,8 +34,9 @@ const mobileProjects = info.projects.filter(
       <WorkWrapper works={Works} />
       <section data-animate="fade-up" class="mt-20">
         <h1 style="line-height: 1.2;" class="pb-10">Personal Projects</h1>
+        <WorkWrapper works={personalWorks} />
         <section data-animate="fade-up">
-          <h2 class="w-[15rem] dark:text-light">Web Apps</h2>
+          <h2 class="w-[15rem] dark:text-light">More Web Apps</h2>
           <ProjectsWrapper projects={webProjects} />
         </section>
         <section data-animate="fade-up">

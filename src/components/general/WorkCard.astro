@@ -1,6 +1,6 @@
 ---
 const { workDetail, index } = Astro.props;
-const { title, desc, role, thumbnail, link } = workDetail;
+const { title, desc, role, thumbnail, link, video } = workDetail;
 const isEven = index % 2 === 0;
 ---
 
@@ -10,7 +10,42 @@ const isEven = index % 2 === 0;
     ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
   >
   <div class="w-full md:w-1/2" data-animate={isEven ? 'fade-right' : 'fade-left'}>
-      <img src={thumbnail} alt="projectImage" class="rounded-lg" />
+      {
+        video ? (
+          <div class="relative" data-video-card>
+            {/* #t=1 makes browsers seek and paint a frame at 1s, so the card shows the video instead of a blank box when no poster exists */}
+            <video
+              src={`${video}#t=1`}
+              poster={thumbnail || undefined}
+              class="rounded-lg w-full"
+              playsinline
+              preload="metadata"
+            ></video>
+            <button
+              type="button"
+              class="group/play absolute inset-0 flex items-center justify-center rounded-lg bg-dark/30 transition-colors hover:bg-dark/40"
+              aria-label={`Play ${title} demo video`}
+              data-video-play
+            >
+              <span class="flex h-16 w-16 items-center justify-center rounded-full bg-blue text-dark shadow-lg transition-transform group-hover/play:scale-110">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-1 h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        ) : thumbnail ? (
+          <img src={thumbnail} alt="projectImage" class="rounded-lg" />
+        ) : (
+          <div class="aspect-video w-full rounded-lg bg-dark/5 dark:bg-light/5"></div>
+        )
+      }
     </div>
 
   <div class="flex flex-col w-full md:w-1/2" data-animate="fade-up" data-animate-delay="80">
@@ -44,3 +79,22 @@ const isEven = index % 2 === 0;
     </div>
   </div>
 </article>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-video-card]").forEach((card) => {
+    const video = card.querySelector("video");
+    const playButton = card.querySelector<HTMLButtonElement>("[data-video-play]");
+    if (!video || !playButton) return;
+
+    playButton.addEventListener("click", () => {
+      video.controls = true;
+      playButton.classList.add("hidden");
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    });
+
+    video.addEventListener("ended", () => {
+      playButton.classList.remove("hidden");
+    });
+  });
+</script>

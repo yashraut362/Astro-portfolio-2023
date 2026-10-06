@@ -118,6 +118,9 @@ export const info = {
     },
   ],
 
+  resume:
+    "https://drive.google.com/file/d/1S3sNx4EXNyVFzPrxnPolsYCCnRef2Rwg/view?usp=sharing",
+
   socialMedia: {
     github: "https://github.com/yashraut362",
     email: "hello@yashraut.me",

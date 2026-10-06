@@ -1,7 +1,9 @@
 ---
+import { info } from "@data";
 import { IHeroProps } from "@types";
 
 const { name, about } = Astro.props as IHeroProps;
+const { resume } = info;
 ---
 
 <section data-animate="fade" class="reveal-slow">
@@ -27,7 +29,7 @@ const { name, about } = Astro.props as IHeroProps;
 
         <a
           class="group relative inline-block text-md font-semibold text-white focus:outline-none focus:ring"
-          href="https://drive.google.com/file/d/1-30VIpaEw8P07riiO5_vftTHcwhWuu5i/view?usp=sharing"
+          href={resume}
           target="_blank"
         >
           <span
@@ -62,7 +64,7 @@ const { name, about } = Astro.props as IHeroProps;
 
       <a
         class="group relative inline-block text-md font-semibold text-white focus:outline-none focus:ring"
-        href="https://drive.google.com/file/d/1-30VIpaEw8P07riiO5_vftTHcwhWuu5i/view?usp=sharing"
+        href={resume}
         target="_blank"
       >
         <span

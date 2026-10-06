@@ -1,0 +1,25 @@
+---
+import { info } from "@data";
+
+const resumeUrl = info.resume;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Resume · Yash Raut</title>
+    <meta http-equiv="refresh" content={`0;url=${resumeUrl}`} />
+    <link rel="canonical" href={resumeUrl} />
+    <script is:inline define:vars={{ resumeUrl }}>
+      window.location.replace(resumeUrl);
+    </script>
+  </head>
+  <body>
+    <p>
+      Opening resume…
+      <a href={resumeUrl}>Continue</a>
+    </p>
+  </body>
+</html>

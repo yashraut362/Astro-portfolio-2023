@@ -187,14 +187,6 @@ export const info = {
       category: "mobile",
     },
     {
-      title: "CoronaGo Covid-19 Tracker App",
-      isFeatured: false,
-      thumbnail: "/assets/images/web/coronago.webp",
-      githubUrl: "https://github.com/yashraut362/CoronaGo",
-      liveUrl: "https://coronagoo.netlify.app/",
-      category: "web",
-    },
-    {
       title: "Pothole Detection System",
       isFeatured: true,
       thumbnail: "/assets/images/mobile/pothole.webp",

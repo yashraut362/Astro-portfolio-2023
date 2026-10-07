@@ -10,6 +10,9 @@
 
 /* ========== tailwind custom styles ========== */
 @layer components {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-light dark:bg-dark;
   }

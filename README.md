@@ -27,9 +27,11 @@ bun run preview   # serve dist/ locally
 
 | Route       | Content                                                                                             |
 | :---------- | :-------------------------------------------------------------------------------------------------- |
-| `/`         | Hero + bio, experience timeline with tech-stack icons, skills grid, education, "Let's connect" CTA |
-| `/work`     | Professional projects, featured personal projects, then "More Web Apps" and "Mobile Apps" grids     |
+| `/`         | Hero + bio, experience timeline with tech-stack icons, the Work section (`#work`: professional projects, featured personal projects, then "More Web Apps" and "Mobile Apps" grids), skills grid, education, "Let's connect" CTA |
+| `/resume`   | Redirects to the hosted resume (`info.resume`); `noindex`                                            |
 | `/projects` | Flat grid of all personal projects (legacy; not linked from the nav)                                |
+
+"My work" in the navbar links to `/#work`. The old `/work` route permanently redirects there (see `redirects` in `astro.config.mjs`).
 
 ## Editing content — `src/data/info.ts`
 
@@ -41,11 +43,12 @@ Everything on the site comes from the exported `info` object:
 | `experience`             | Experience timeline                  | `techStack` names are matched case-insensitively against `skills` and shown as icons; names without a matching skill are skipped |
 | `education`              | Education timeline                   | Same component as `experience`                                                                                                   |
 | `skills`                 | Skills grid, experience icons        | `icon` is an SVG under `public/svg/`                                                                                             |
-| `works`                  | Professional Projects on `/work`     | Full-width cards: `title`, `desc`, `role`, `link`, plus `thumbnail` and/or `video`. An empty `link` renders "Restricted access internal tool" |
-| `personalWorks`          | Featured personal projects on `/work` | Same card and fields as `works`                                                                                                  |
+| `works`                  | Professional Projects in `#work`     | Full-width cards: `title`, `desc`, `role`, `link`, plus `thumbnail` and/or `video`. An empty `link` renders "Restricted access internal tool" |
+| `personalWorks`          | Featured personal projects in `#work` | Same card and fields as `works`                                                                                                  |
 | `projects`               | "More Web Apps" / "Mobile Apps" grids | `category` (`"web"` or `"mobile"`) picks the grid; `githubUrl` and `liveUrl` become the corner icons                             |
 | `socialMedia`, `connect` | Footer; Connect section              | GitHub, LinkedIn, email; Calendly link and email for the CTA                                                                     |
 | `baseUrl`                | Canonical and Open Graph URLs        |                                                                                                                                  |
+| `resume`                 | `/resume` redirect target            | URL of the hosted resume PDF                                                                                                     |
 
 ### Video demos on work cards
 
@@ -66,12 +69,12 @@ referenced by absolute path, e.g. `/assets/images/work/truco.webp`.
 public/               favicons, fonts, images, svg/ skill icons, scroll-animate.js
 src/
 ├── components/
-│   ├── general/      Navbar, Footer, MetaHead, Skills, Connect,
+│   ├── general/      Navbar, Footer, MetaHead, Skills, Connect, WorkShowcase,
 │   │                 WorkCard + WorkWrapper, ProjectCard + ProjectsWrapper
 │   └── home/         Hero, Experience
 ├── data/info.ts      all site content
 ├── layouts/          Layout.astro
-├── pages/            index.astro, work.astro, projects.astro
+├── pages/            index.astro, resume.astro, projects.astro
 ├── styles/           style.css (Tailwind layers + scroll-reveal), fonts.css, custom-styles.css
 ├── types/index.ts    IWork, IProject, IExperience, ...
 └── utils/

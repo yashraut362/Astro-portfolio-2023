@@ -5,6 +5,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.yashraut.me",
+  redirects: {
+    "/work": "/#work",
+  },
   integrations: [
     sitemap({
       changefreq: "weekly",

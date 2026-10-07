@@ -1,0 +1,33 @@
+---
+import { info } from "@data";
+import WorkWrapper from "./WorkWrapper.astro";
+import ProjectsWrapper from "./ProjectsWrapper.astro";
+
+const works = info.works;
+const personalWorks = info.personalWorks;
+const webProjects = info.projects.filter(
+  (project) => project.category === "web",
+);
+const mobileProjects = info.projects.filter(
+  (project) => project.category === "mobile",
+);
+---
+
+<section id="work" class="scroll-mt-8">
+  <h1 style="line-height: 1.2;" class="pb-10" data-animate="fade-up">
+    Professional Projects
+  </h1>
+  <WorkWrapper works={works} />
+  <section data-animate="fade-up" class="mt-20">
+    <h1 style="line-height: 1.2;" class="pb-10">Personal Projects</h1>
+    <WorkWrapper works={personalWorks} />
+    <section data-animate="fade-up">
+      <h2 class="w-[15rem] dark:text-light">More Web Apps</h2>
+      <ProjectsWrapper projects={webProjects} />
+    </section>
+    <section data-animate="fade-up">
+      <h2 class="w-[15rem] dark:text-light">Mobile Apps</h2>
+      <ProjectsWrapper projects={mobileProjects} />
+    </section>
+  </section>
+</section>

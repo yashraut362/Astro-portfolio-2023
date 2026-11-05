@@ -279,7 +279,7 @@ export const info = {
       desc: "MovieX is a responsive platform for exploring movies, viewing trailers and discovering new releases, with TMDB API metadata powering search and up-to-date content. Built with React, Next.js and Tailwind CSS, and deployed on Vercel.",
       role: "Frontend Developer",
       video:
-        "https://github.com/user-attachments/assets/fcd53f6b-4a56-483f-ac16-9ce671f925b5",
+        "https://github.com/user-attachments/assets/ea522c22-a627-424c-bd65-4bded2d84659",
       link: "https://moviex.yashraut.me/",
     },
     {

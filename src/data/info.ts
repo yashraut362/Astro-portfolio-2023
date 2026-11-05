@@ -119,7 +119,7 @@ export const info = {
   ],
 
   resume:
-    "https://drive.google.com/file/d/1S3sNx4EXNyVFzPrxnPolsYCCnRef2Rwg/view?usp=sharing",
+    "https://docs.google.com/document/d/1hpJ2tu0ec5elB1Tp4oIm0_DiChbHVEr1m7PIH_apYj8/view",
 
   socialMedia: {
     github: "https://github.com/yashraut362",
